@@ -1,5 +1,6 @@
-TimesTable=int(input("Enter TimesTable"))
+TimesTable=int(input("Enter TimesTable : "))
+Limit=int(input("Enter Limit : "))
 i=1
-while i<=10:
-	print(TimesTable, "X",i,"=",(TimesTable*i))
+while i<=Limit:
+	print(TimesTable, "X",i,"=",(TimesTable*Limit))
 	i=i+1
