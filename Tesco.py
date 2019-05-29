@@ -1,0 +1,11 @@
+product=input("Enter Product:")
+price=input("Enter Price:")
+qty=input("Enter qty:")
+amount=float(price)*int(qty)
+vat=round(amount*15/100,2)
+bill=amount+vat
+print("YOUR BILL:")
+print("product:",product)
+print("amount: £",amount)
+print("vat: £",vat)
+print("bill: £",bill)
