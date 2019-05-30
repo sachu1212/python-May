@@ -1,19 +1,21 @@
-def change(message):
-	i=0
-	newmessage=""
-	while i<len(message):
-			if ord(message[i])>=65 and ord(message[i])<=90:
-					newmessage+=chr(ord(message[i])+32)
-			else:
-				if ord(message[i])>=90 and ord(message[i])<=122:
-					newmessage+=chr(ord(message[i])-32)
-			
-				else:
-					if ord(message[i])>=48 and ord(message[i])<=57:
-						newmessage+=str(int(message[i])*2)
-					else:
-						newmessage+=message[i]	
-			i+=1
-	print(newmessage)
+def reverse(word):
+	newword=""
+	i=len(word)-1
+	while i>=0:
+		newword=newword+word[i]
+		i-=1
+	return newword
 
-change("ABC67%^*//")		
+message=input("Enter any message : ")
+newmessage=""
+word=""
+
+for ch in message:
+	if ch==" ":
+		newmessage+=(reverse(word)+ " ")
+		word=""
+	else:
+		word+= ch
+newmessage += reverse(word)
+
+print(newmessage)
